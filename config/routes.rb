@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'events/index'
 
   get 'events/new'
+  post 'events/new' => 'events#create'
 
   get 'events/create'
 
