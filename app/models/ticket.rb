@@ -14,4 +14,5 @@ class Ticket < ApplicationRecord
   validates :email_address, :presence => true
   validates :price, :presence => true
   belongs_to :event
+  belongs_to :user
 end

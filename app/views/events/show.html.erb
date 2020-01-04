@@ -34,7 +34,9 @@
   <%= @event.event_date %>
 </p>
 
-<%= render "new_ticket", ticket: Ticket.new(:event_id=>@event.id) %>
+  <h3>Dodaj nowy bilet do tego wydarzenia</h3>
+
+<%= render "new_ticket", ticket: Ticket.new(:event_id=>@event.id, :user_id=>(user_signed_in? ? current_user.id : '')) %>
 
   <hr>
 
