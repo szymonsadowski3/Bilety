@@ -1,1 +1,7 @@
 <%= render "events/tickets_list", tickets: Ticket.all %>
+
+<div class="container">
+  <button class="btn btn-default">
+    <%= link_to 'New Ticket', new_ticket_path %>
+  </button>
+</div>

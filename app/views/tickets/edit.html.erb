@@ -1,6 +1,14 @@
+<%= render 'layouts/navigation' %>
+
+<div class="container mt-5">
+
 <h1>Editing Ticket</h1>
 
 <%= render 'form', ticket: @ticket %>
 
-<%= link_to 'Show', @ticket %> |
-<%= link_to 'Back', tickets_path %>
+  <hr>
+
+<button class="btn btn-default"><%= link_to 'Show', @ticket %></button> |
+<button class="btn btn-default"><%= link_to 'Back', tickets_path %></button>
+
+</div>

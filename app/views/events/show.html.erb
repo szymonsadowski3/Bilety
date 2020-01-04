@@ -1,7 +1,13 @@
+
+
 <p id="notice"><%= notice %></p>
 <p id="komunikat"><%= flash[:komunikat] %></p>
 
 <%= render "tickets_list", tickets: Ticket.where(event_id: @event.id) %>
+
+<div class="container">
+
+  <h3>Event description</h3>
 
 <p>
   <strong>Artist:</strong>
@@ -30,4 +36,9 @@
 
 <%= render "new_ticket", ticket: Ticket.new(:event_id=>@event.id) %>
 
+  <hr>
+
+<button class="btn btn-default">
 <%= link_to 'Back', events_path %>
+</button>
+</div>

@@ -1,7 +1,11 @@
+<%= render 'layouts/navigation' %>
+
+<div class="container mt-5">
+
 <h2>Lista wydarzeń</h2>
 
 <% for event in Event.all %>
-  <table>
+  <table class="table">
     <thead>
     <tr>
       <th>Artist</th>
@@ -32,4 +36,9 @@
 
 <%= render 'form', ticket: @ticket %>
 
+  <hr>
+
+<button class="btn btn-default">
 <%= link_to 'Back', tickets_path %>
+</button>
+</div>
