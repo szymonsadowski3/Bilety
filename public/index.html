@@ -15,6 +15,14 @@
         .mt-5 {
             margin-top: 5rem;
         }
+
+        .centered {
+            padding-top: 15px;
+        }
+
+        .main-page-link {
+            font-size: 22px;
+        }
     </style>
 </head>
 <body>
@@ -36,6 +44,13 @@
             <li>
                 <a href="/events">Wydarzenia</a>
             </li>
+
+            <li>
+                <div class="centered">
+                    <a href="/users/sign_up">Sign up</a> |
+                    <a href="/users/sign_in">Login</a>
+                </div>
+            </li>
         </ul>
     </div>
 </nav>
@@ -43,8 +58,12 @@
 <div class="container mt-5">
     <h2>Informacje o wydarzeniach i sprzedaż biletów</h2>
     <ul>
-        <li><a href="/tickets">Bilety</a></li>
-        <li><a href="/events">Imprezy</a></li>
+        <li>
+            <a href="/tickets" class="main-page-link">Bilety</a>
+        </li>
+        <li>
+            <a href="/events" class="main-page-link">Imprezy</a>
+        </li>
     </ul>
 
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
