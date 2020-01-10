@@ -41,12 +41,6 @@
     <%= form.text_field :phone, id: :ticket_phone %>
   </div>
 
-<!--  <div class="field">-->
-    <%#= form.label :event_id %>
-    <%#= form.text_field :event_id %>
-<!--  </div>-->
-
-  <%#= form.select :event_id, Event.all(&:id)%>
   <label for="ticket_name">Event id</label>
   <%= form.collection_select(:event_id, Event.all, :id, :id, {:prompt   => "Select event id"}, {:id => 'events_select'}) %>
 

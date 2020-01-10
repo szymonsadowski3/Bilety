@@ -1,4 +1,9 @@
-<%= render "events/tickets_list", tickets: Ticket.all %>
+<% if user_signed_in? %>
+  <%= render "events/tickets_list", tickets: Ticket.where(user_id: current_user.id), header: 'My tickets' %>
+<% end %>
+
+
+<%= render "events/tickets_list", tickets: Ticket.all, header: 'All tickets' %>
 
 <div class="container">
   <button class="btn btn-default">
